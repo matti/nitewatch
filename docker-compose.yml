@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  nitewatch:
+    build: .
+    image: mattipaksula/nitewatch:1.13.10-alpine3.11
+
+  test:
+    build: test
+    volumes:
+      - ./test:/app
